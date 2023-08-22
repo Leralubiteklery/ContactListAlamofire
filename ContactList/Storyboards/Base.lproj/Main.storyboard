@@ -11,7 +11,7 @@
         <!--Contacts-->
         <scene sceneID="nUF-vh-UdX">
             <objects>
-                <tableViewController id="NWf-dt-9ko" sceneMemberID="viewController">
+                <tableViewController id="NWf-dt-9ko" customClass="ContactListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Le8-7h-M0U">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,17 +33,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="HKS-0h-YKj"/>
                     <connections>
-                        <segue destination="6pG-bS-fhE" kind="show" id="uVe-lk-fCg"/>
+                        <segue destination="6pG-bS-fhE" kind="show" identifier="showDetails" id="uVe-lk-fCg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K13-4I-z1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="236" y="-73"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Details View Controller-->
         <scene sceneID="ORG-PM-thb">
             <objects>
-                <viewController id="6pG-bS-fhE" sceneMemberID="viewController">
+                <viewController id="6pG-bS-fhE" customClass="ContactDetailsViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="153-Nr-JmK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
