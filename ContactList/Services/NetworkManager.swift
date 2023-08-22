@@ -11,10 +11,14 @@ import Alamofire
 class NetworkManager {
     static let shared = NetworkManager()
     
+    private let urlParams = [
+        "results": "\(15)",
+    ]
+    
     private init() {}
     
     func fetchUsers(_ completion: @escaping(Result<[User], AFError>) -> Void) {
-        AF.request(URLConstants.randomUserAPI.rawValue)
+        AF.request(URLConstants.randomUserAPI.rawValue, parameters: urlParams)
             .responseJSON { dataResponse in
                 switch dataResponse.result {
                 case .success(let value):
