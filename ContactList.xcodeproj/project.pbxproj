@@ -15,6 +15,8 @@
 		EDD8F7832A95048F00CD64ED /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F7822A95048F00CD64ED /* ContactListViewController.swift */; };
 		EDD8F7852A9504C300CD64ED /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F7842A9504C300CD64ED /* ContactDetailsViewController.swift */; };
 		EDD8F7882A950B0200CD64ED /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F7872A950B0200CD64ED /* RandomUser.swift */; };
+		EDD8F78B2A95157700CD64ED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F78A2A95157700CD64ED /* NetworkManager.swift */; };
+		EDD8F78E2A95194D00CD64ED /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EDD8F78D2A95194D00CD64ED /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		EDD8F7822A95048F00CD64ED /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		EDD8F7842A9504C300CD64ED /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		EDD8F7872A950B0200CD64ED /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
+		EDD8F78A2A95157700CD64ED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD8F78E2A95194D00CD64ED /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 		EDD8F7692A95018F00CD64ED /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				EDD8F7892A95156800CD64ED /* Services */,
 				EDD8F7862A950AE400CD64ED /* Models */,
 				EDD8F7812A9501CC00CD64ED /* App */,
 				EDD8F77E2A9501A500CD64ED /* ViewControllers */,
@@ -113,6 +118,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EDD8F7892A95156800CD64ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDD8F78A2A95157700CD64ED /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +142,9 @@
 			dependencies = (
 			);
 			name = ContactList;
+			packageProductDependencies = (
+				EDD8F78D2A95194D00CD64ED /* Alamofire */,
+			);
 			productName = ContactList;
 			productReference = EDD8F7672A95018F00CD64ED /* ContactList.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +173,9 @@
 				Base,
 			);
 			mainGroup = EDD8F75E2A95018F00CD64ED;
+			packageReferences = (
+				EDD8F78C2A95194D00CD64ED /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EDD8F7682A95018F00CD64ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD8F78B2A95157700CD64ED /* NetworkManager.swift in Sources */,
 				EDD8F76B2A95018F00CD64ED /* AppDelegate.swift in Sources */,
 				EDD8F76D2A95018F00CD64ED /* SceneDelegate.swift in Sources */,
 				EDD8F7852A9504C300CD64ED /* ContactDetailsViewController.swift in Sources */,
@@ -406,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDD8F78C2A95194D00CD64ED /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDD8F78D2A95194D00CD64ED /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDD8F78C2A95194D00CD64ED /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDD8F75F2A95018F00CD64ED /* Project object */;
 }

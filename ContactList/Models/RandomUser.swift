@@ -179,3 +179,8 @@ struct Name: Codable {
             thumbnail = value["thumbnail"]
         }
     }
+
+// MARK: - Constants
+enum URLConstants: String {
+    case randomUserAPI = "https://randomuser.me/api/"
+}
