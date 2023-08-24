@@ -184,3 +184,7 @@ struct Name: Codable {
 enum URLConstants: String {
     case randomUserAPI = "https://randomuser.me/api/"
 }
+
+enum segue: String {
+    case showDetails = "showDetails"
+}
