@@ -61,15 +61,15 @@ struct User {
 
 // MARK: - Name
 struct Name: Codable {
-    let title, first, last: String?
+    var title, first, last: String?
     
-    init(value: [String:String]) {
+    init(value: [String: String]) {
         title = value["title"]
         first = value["first"]
         last = value["last"]
     }
     
-    init(first: String, last: String){
+    init(first: String, last: String) {
         self.first = first
         self.last = last
     }
