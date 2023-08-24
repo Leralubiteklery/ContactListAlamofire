@@ -14,6 +14,8 @@ class ContactListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60
+        downloadData()
+        setupRefreshControl()
         
     }
     
@@ -57,9 +59,18 @@ extension ContactListViewController {
             case .success(let contacts):
                 self.contacts = contacts
                 self.tableView.reloadData()
+                if self.refreshControl != nil {
+                    self.refreshControl?.endRefreshing()
+                }
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(downloadData), for: .valueChanged)
     }
 }
