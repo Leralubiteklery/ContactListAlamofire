@@ -16,7 +16,11 @@ class ContactListViewController: UITableViewController {
         tableView.rowHeight = 60
         downloadData()
         setupRefreshControl()
-        
+    }
+    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         guard let detailsVC = segue.destination as? ContactDetailsViewController else { return }
+         detailsVC.result = sender as? User
     }
     
     // MARK: - Table view data source
@@ -58,6 +62,12 @@ extension ContactListViewController {
             contacts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentUser = contacts[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: currentUser)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

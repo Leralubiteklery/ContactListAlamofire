@@ -9,6 +9,8 @@ import UIKit
 
 class ContactDetailsViewController: UIViewController {
 
+    var result: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
