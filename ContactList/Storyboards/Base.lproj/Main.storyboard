@@ -85,6 +85,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e6H-MB-jkV"/>
+                    <connections>
+                        <outlet property="contactImage" destination="IjD-XI-Q8V" id="ArJ-28-XQv"/>
+                        <outlet property="firstNameLabel" destination="9vy-Q4-yqg" id="f18-HD-IKf"/>
+                        <outlet property="secondNameLabel" destination="QIx-mM-Jd9" id="d5a-2j-ZrU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umf-rN-L0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

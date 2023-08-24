@@ -17,6 +17,7 @@
 		EDD8F7882A950B0200CD64ED /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F7872A950B0200CD64ED /* RandomUser.swift */; };
 		EDD8F78B2A95157700CD64ED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD8F78A2A95157700CD64ED /* NetworkManager.swift */; };
 		EDD8F78E2A95194D00CD64ED /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EDD8F78D2A95194D00CD64ED /* Alamofire */; };
+		EDD8F7912A97A09600CD64ED /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EDD8F7902A97A09600CD64ED /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD8F78E2A95194D00CD64ED /* Alamofire in Frameworks */,
+				EDD8F7912A97A09600CD64ED /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,7 @@
 			name = ContactList;
 			packageProductDependencies = (
 				EDD8F78D2A95194D00CD64ED /* Alamofire */,
+				EDD8F7902A97A09600CD64ED /* AlamofireImage */,
 			);
 			productName = ContactList;
 			productReference = EDD8F7672A95018F00CD64ED /* ContactList.app */;
@@ -175,6 +178,7 @@
 			mainGroup = EDD8F75E2A95018F00CD64ED;
 			packageReferences = (
 				EDD8F78C2A95194D00CD64ED /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EDD8F78F2A97A09600CD64ED /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = EDD8F7682A95018F00CD64ED /* Products */;
 			projectDirPath = "";
@@ -436,6 +440,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		EDD8F78F2A97A09600CD64ED /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -443,6 +455,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EDD8F78C2A95194D00CD64ED /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EDD8F7902A97A09600CD64ED /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDD8F78F2A97A09600CD64ED /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
